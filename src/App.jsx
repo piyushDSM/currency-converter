@@ -36,16 +36,17 @@ function App() {
           <form
             onSubmit={(e) => {
               e.preventDefault();
-              convert()
+              convert();
             }}
           >
             <div className="w-full mb-1">
-              <InputBox label="From"
-              amount={amount}
-              currencyOption={options} 
-              OnCurrencyChange={(currency) => setAmount(amount)}
-              selectCurrency={from}
-              onAmountChange={(amount) => setAmount(amount)}
+              <InputBox
+                label="From"
+                amount={amount}
+                currencyOption={options}
+                OnCurrencyChange={(currency) => setAmount(amount)}
+                selectCurrency={from}
+                onAmountChange={(amount) => setAmount(amount)}
               />
             </div>
             <div className="relative w-full h-0.5">
@@ -58,13 +59,14 @@ function App() {
               </button>
             </div>
             <div className="w-full mt-1 mb-4">
-            <InputBox label="To"
-              amount={convertedAmount}
-              currencyOption={options} 
-              OnCurrencyChange={(currency) => setTo(currency)}
-              selectCurrency={from} 
-              amountDisable
-              /> 
+              <InputBox
+                label="To"
+                amount={convertedAmount}
+                currencyOption={options}
+                OnCurrencyChange={(currency) => setTo(currency)}
+                selectCurrency={from}
+                amountDisable
+              />
             </div>
             <button
               type="submit"
